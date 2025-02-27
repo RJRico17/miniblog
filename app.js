@@ -31,15 +31,24 @@ app.get('/', (req,res) => {
 });
 app.post('/submit', async(req,res) => {
     const newPost = {
-        author: req.body.name,
+        author: req.body.author,
         title: req.body.title,
         content: req.body.content
     }
     const connection = await connect();
-    const orders = await connection.query(`INSERT INTO posts (author,title,content) VALUES (${newPost.name},${newPost.title},${newPost.content});`);
+    const posts = await connection.query(`INSERT INTO posts (author,title,content) VALUES ("${newPost.author}","${newPost.title}","${newPost.content}");`);
     console.log(newPost);
     res.render('confirmation',{newPost});
 });
+app.get('/entries', async(req,res) => {
+    const connection = await connect();
+    const posts = await connection.query('SELECT * FROM posts;');
+    console.log(posts);
+    if (posts.length === 0) {
+        res.render("No posts!");
+    }
+    res.render('entries', {posts})
+})
 app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
 });

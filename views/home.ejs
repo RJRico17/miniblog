@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="/styles/home.css" />
 </head>
 <body>
-    <form>
-        <h1>Create a new post</h1>
+    <h1>Create a new post</h1>
+    <form action="/submit" method="post">
         <label for="myInput">Name: </label>
-        <input type="text" id="myInput" name="myInput" placeholder="Type here..." required>
+        <input type="text" id="myInput" name="author" placeholder="Type here..." required>
         <label for="myInput">Title: </label>
-        <input type="text" id="myInput" name="myInput" placeholder="Type here..." required>
+        <input type="text" id="myInput" name="title" placeholder="Type here..." required>
         <form>
         <label for="myInput">Content:</label>
-        <input type="text" id="myInput" name="myInput" placeholder="Type here..." required>
+        <input type="text" id="myInput" name="content" placeholder="Type here..." required>
         <input type="submit">
         </form>
         

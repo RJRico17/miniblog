@@ -9,3 +9,5 @@ USE miniblog;
 --     
 --     PRIMARY KEY (ID)
 -- );
+
+SELECT * FROM posts;

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entries</title>
+</head>
+<body>
+    <h1>Entries</h1>
+    <% for (let i = 0; i < posts.length; i++) { %>
+        <div class="userPost">
+            <h2> <%= posts[i].title%></h2>
+            <p> <%= posts[i].content %></p>
+            <p> <%= posts[i].author %></p>
+        </div>
+    <%     } %>
+    <a href="/">Create a new post</a>
+</body>
+</html>
