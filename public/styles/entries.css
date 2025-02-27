@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  h1 {
+    text-align: center;
+  }
+
+.userPost {
+    background: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+  .userPost h2 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  .userPost p {
+    margin: 0.5em 0 0;
+  }
+
+  a:hover {
+    background-color: #0056b3;
+  }
